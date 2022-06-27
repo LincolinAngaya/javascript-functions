@@ -88,10 +88,66 @@
 // index.js: 75 Arrow: lincolin
 // index.js: 80 Function:
 //this------> the object that is executing the current function
-const video = {
-    title: 'link',
-    play() {
-        console.log(this)
-    }
-};
-video.play();
+// const video = {
+//     title: 'link',
+//     play() {
+//         console.log(this)
+//     }
+// };
+// video.play();
+//==========================================================================================================================================
+//function declaration
+function greet() {
+    // console.log('hello there')
+}
+greet()
+    //FUNCTION EXPRESSION
+    //place semi-colon at the end of function
+    //hoisting is effectively on function declation but it doesn't work with function expression and most prefferebly use function expression
+    // const speak = function(name, age) {
+    //     console.log(`good day ${name} ${age}`);
+    // };
+    // speak('lincolin', 33)
+    //=================================================================================================================================
+    //callback --->we can pass in a function as an arguemnt
+    // const myFunc = (myName) => {
+    //     //do something
+    //     let value = 50;
+    //     myName(value);
+    // }
+    // myFunc(function(value) {
+    //     //do somethin
+    //     console.log(value);
+    // });
+    // const calcArea = (Area) => {
+    //     let length = 50;
+    //     let width = 60;
+    //     let areaCovered = length * width;
+    //     Area(areaCovered)
+    // }
+    // calcArea((areaCovered)=> {
+    //     console.log(areaCovered)
+    // })
+
+//buit in array method called foreach---->iterate over an array elements
+
+// let people = ['mario', 'luigi', 'ryan', 'shaun', 'chun-li'];
+// let logperson = ((index, person) => {
+//     console.log(`${index}- hello - ${person}`)
+// })
+// people.forEach(logperson)
+// let people = ['mario', 'luigi', 'ryan', 'shaun', 'chun-li'];
+// people.forEach(function(index, person) {
+//     console.log(`${index}- hello - ${person}`)
+// })
+let ul = document.querySelector('.people')
+let people = ['mario', 'luigi', 'ryan', 'shaun', 'chun-li'];
+let html = ``
+people.forEach((person) => {
+
+        //create html template
+        html += `<li style = "color:purple"> ${person} </li>`
+
+    })
+    // console.log(html)
+ul.innerHTML = html
