@@ -211,4 +211,16 @@
 //generator functions
 //----->generator functions can return ('yield) multiple values,one after another,on demand
 //to create a generator ,we use the syntax : function*
+
+// function* generatorSequence() {
+
+//         yield 1;
+//         yield 2;
+//         yield 3;
+//         yield 4;
+//     }
 //predefined functions
+//eval-- - > evaluates a string and  return a value.
+//ParseInt---->parses a stringar gument and returns an integer of the specified radix or base
+//parseFloat---->parsesa stringarguementand returns a floating-point number
+//escpae--->returnsthe hexadecimalencodingof an argument
