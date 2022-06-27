@@ -224,3 +224,65 @@
 //ParseInt---->parses a stringar gument and returns an integer of the specified radix or base
 //parseFloat---->parsesa stringarguementand returns a floating-point number
 //escpae--->returnsthe hexadecimalencodingof an argument
+//==========================================================================================================================================//function statement/declaration
+// function a() {
+//     console.log('a called')
+// }
+// a()
+//     //function expression
+// var b = function() {
+//     console.log('b called ')
+// }
+// b()
+//the difference between function statement and function declaration is you can hoist a function statament/declaration but you cannot hoist function expression
+//anonymous function-have no name
+//are used when function is being assigned a  value 
+// function() {
+
+// }
+//name function expression---->is a function likefunction expression but it has a name
+// let x = function area() {
+
+// }
+//first class function----->ability to use functions as a value
+//a programming language is saidto havea first-class function,if functions in thatprogramming languageare treted like any other value
+//1.you can assign a functionto a variable like any other value
+//assigning a function to a variable
+let greet = function(name) {
+    return 'hello  ' + name + ' ! how are you doing?'
+}
+let msg = greet('john');
+console.log(msg);
+//2. you can pass a function as an arguement to another function
+let birthYears = [1989, 2007, 1992];
+
+function getResultArray(arr, callback) {
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+        let val = callback(arr[i]);
+        result.push(val)
+    }
+}
+
+function calcAge(birthYear) {
+    return new Date().getFullYear() - birthYear;
+}
+getResultArray(birthYears, calcAge)
+    //3.you can return a function from another function
+function interviewQuestion(job) {
+    if (job === 'teacher') {
+        let question = 'how many years of teaching experience do you have?';
+        return function(name) {
+
+            console.log('hi ' + name + '.' + question);
+        }
+    }
+}
+//HIGHER ORDER FUNCTIONS
+//are the functions which operats on otherfunctions,either by taking themas arguementor by returning them.
+//in simplewords,higher functions is a function that
+//receives a function as an argument
+//returns the function as output
+//it does both i.ereceives a function as argument as well as returs a function
+//-higher order functions is only possiblebecauseof the presence offirst class functions in programming languages.
+//function such as filter(),reduce(),map(),forEach() are the examplesof higherorder functions.because all these function take this another functionas its arguement
