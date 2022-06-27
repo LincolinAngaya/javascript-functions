@@ -207,6 +207,8 @@
 // var circle = new Function("rad", body);
 // alert(circle(5.222))
 //arrow functions
-//cannot be used as constructors
+//-->cannot be used as constructors
 //generator functions
+//----->generator functions can return ('yield) multiple values,one after another,on demand
+//to create a generator ,we use the syntax : function*
 //predefined functions
